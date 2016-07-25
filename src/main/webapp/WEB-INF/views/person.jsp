@@ -16,6 +16,7 @@
 		<script type="text/javascript">
 			function results() {
 				var nombre=$("input#input").val();
+				nombre=nombre.replace(" ","%20");
 				$("#div1").load("resultados.htm?name="+nombre);						
 			}						
 		</script>

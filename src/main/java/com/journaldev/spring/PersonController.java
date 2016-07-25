@@ -119,8 +119,7 @@ public class PersonController {
     }
 
     @RequestMapping("/resultados.htm")
-    public String resultsPerson(@RequestParam("name") String name, Model model){     
-    	System.out.println(name);
+    public String resultsPerson(@RequestParam("name") String name, Model model){         
     	model.addAttribute("searchedName", name);
         model.addAttribute("listPersons2", this.personService.listPersons(name));
         return "results";
